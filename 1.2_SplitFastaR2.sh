@@ -1,12 +1,13 @@
 #!/bin/sh
 # Grid Engine options
-#$ -N splitfaR2
+#$ -N ed_splitfaR2
 #$ -cwd
 #$ -t 1-20
 #$ -l h_rt=4:00:00
 #$ -l h_vmem=4G
-#S -pe sharedmem 4
 #$ -R y
+#$ -o o_files/
+#$ -e e_files/
 
 # Jobscript to split fasta files
 
@@ -18,7 +19,7 @@
 . /etc/profile.d/modules.sh
 
 # Target directory
-TARGET_DIR=/exports/cmvm/eddie/eb/groups/ogden_grp/emily/SHO_reseq_2020/data/raw/r2
+TARGET_DIR=/exports/eddie/scratch/ehumble/r2
 
 # Get list of files in target directory
 

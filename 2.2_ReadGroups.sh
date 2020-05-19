@@ -4,9 +4,11 @@
 #$ -cwd
 #$ -l h_rt=12:00:00
 #$ -l h_vmem=8G
-#S -pe sharedmem 4
+#$ -pe sharedmem 4
 #$ -t 1-478
 #$ -R y
+#$ -o o_files/
+#$ -e e_files/
 
 # Jobscript to index reference
 

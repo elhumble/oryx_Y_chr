@@ -1,11 +1,13 @@
 #!/bin/sh
 # Grid Engine options
-#$ -N IndexRef
+#$ -N ed_index_ref
 #$ -cwd
 #$ -l h_rt=6:00:00
 #$ -l h_vmem=16G
 #$ -pe sharedmem 4
 #$ -R y
+#$ -o o_files/
+#$ -e e_files/
 
 # Jobscript to index reference
 
@@ -20,7 +22,7 @@
 module add roslin/samtools/1.9
 module add roslin/bwa/0.7.17
 
-REFERENCE=/exports/cmvm/eddie/eb/groups/orden_grp_emily/SHO_reseq_2020/data/reference/oryx_v2_chr.fasta
+REFERENCE=/exports/cmvm/eddie/eb/groups/ogden_grp/emily/SHO_Y_2020/reference/oryx.1.FINAL.fasta
 
 # index ref with both bwa and samtools for mapping and SNP calling with samtools
 

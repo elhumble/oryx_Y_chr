@@ -1,4 +1,8 @@
 /reference
 /data
+/ed_out
+/o_files
+/e_files
 1.0_StageIn.sh
 9_StageOut.sh
+ed*
